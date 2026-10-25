@@ -1,5 +1,7 @@
 # SmartTravel
 
+![SmartTravel cover](SmartTravel-Cover.svg)
+
 **One key. Everywhere.** Intelligent, class-aware travel for **World of Warcraft: Wrath of the Lich King 3.3.5a**.
 
 SmartTravel maintains a single account-wide macro that picks an appropriate travel option for your character, learned mounts, location, and modifiers.
