@@ -1,6 +1,6 @@
 ## Interface: 30300
 ## Title: SmartTravel
 ## Notes: Speed-aware universal travel macro for WoW 3.3.5a
-## Version: 0.7.49
+## Version: 1.0.0
 ## SavedVariablesPerCharacter: SmartTravelDB
 SmartTravel.lua
