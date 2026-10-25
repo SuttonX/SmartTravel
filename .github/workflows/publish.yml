@@ -11,16 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Package addon
+      - name: Validate approved release package
         run: |
-          mkdir -p dist/SmartTravel
-          cp SmartTravel.lua SmartTravel.toc dist/SmartTravel/
-          cp README.md dist/SmartTravel/
-          cp SmartTravel-Cover.svg dist/SmartTravel/
-          cd dist && zip -r SmartTravel.zip SmartTravel
-      - name: Publish release
+          python3 - <<'PY'
+          import pathlib, zipfile
+          with zipfile.ZipFile('release/SmartTravel.zip') as archive:
+              expected = {'SmartTravel/SmartTravel.lua', 'SmartTravel/SmartTravel.toc', 'SmartTravel/README.md', 'SmartTravel/SmartTravel-Cover.jpg'}
+              assert set(archive.namelist()) == expected
+              for name in ('SmartTravel.lua', 'SmartTravel.toc', 'SmartTravel-Cover.jpg'):
+                  assert archive.read('SmartTravel/' + name) == pathlib.Path(name).read_bytes()
+              assert b'## Version: 1.0.0' in archive.read('SmartTravel/SmartTravel.toc')
+          PY
+      - name: Update existing release asset
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.0.0 >/dev/null 2>&1 || gh release create v1.0.0 dist/SmartTravel.zip --title 'SmartTravel v1.0.0' --notes 'Initial public release for WoW WotLK 3.3.5a. Smart mount selection, Druid travel forms, Shaman Ghost Wolf, configurable Hearthstone modifier and mount overrides.'
-          gh release upload v1.0.0 dist/SmartTravel.zip --clobber
+          gh release view v1.0.0
+          gh release upload v1.0.0 release/SmartTravel.zip --clobber
