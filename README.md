@@ -11,7 +11,7 @@ SmartTravel automatically creates and maintains a **single account-wide travel m
 - **Smart mount selection:** chooses from your learned mounts and considers mount speed and where you can fly.
 - **Ground mount modifier:** select a ground mount when you want one instead of the normal travel choice.
 - **Hearthstone:** use the configurable modifier (Alt by default), or let Hearthstone serve as the fallback when no suitable travel option is available.
-- **Direct Hearthstone casting:** when Hearthstone is the selected action—including a fallback—it casts immediately rather than requiring a separate dismount press.
+- **Direct Hearthstone casting:** when Hearthstone is the selected action, including a fallback, it casts immediately rather than requiring a separate dismount press.
 - **Safe mount switching:** when already riding a regular mount on the ground, the first press dismounts and the next press summons the selected mount. Airborne safety checks remain in place.
 - **Class-aware:** includes Druid travel forms and Shaman Ghost Wolf handling, with their own combat and travel considerations.
 - **Shared macro:** one account-wide macro instead of maintaining different travel macros for each character.
@@ -58,11 +58,11 @@ The default Hearthstone modifier is **Alt**; the options panel allows changing i
 
 ## Other addons by SuttonX
 
-- [SetupSwap](https://github.com/SuttonX/SetupSwap) — switch addon/UI profiles
-- [ConsolePortLK-Enhanced](https://github.com/SuttonX/ConsolePortLK-Enhanced) — improved controller UI for WotLK
-- [FormFreedom](https://github.com/SuttonX/FormFreedom) — automatic shapeshift cancellation when needed
-- [QuestieAutoTomTom](https://github.com/SuttonX/QuestieAutoTomTom) — Questie objective navigation
-- [Classfix](https://github.com/SuttonX/Classfix) — customizable class colors
+- [FormFreedom](https://github.com/SuttonX/FormFreedom): Automatic dismounting and shapeshift cancellation for supported actions.
+- [SetupSwap](https://github.com/SuttonX/SetupSwap): Save and switch addon selections, settings, UI layouts, and action-bar setups.
+- [Classfix](https://github.com/SuttonX/Classfix): Customize class colors across compatible UI frames and addons.
+- [ConsolePortLK Enhanced](https://github.com/SuttonX/ConsolePortLK-Enhanced): Controller UI for WotLK with improved action bars, satellites, and cooldown displays.
+- [Questie TomTom Helper](https://github.com/SuttonX/QuestieAutoTomTom): Automatic Questie objective and turn-in waypoints that respect your manual navigation choices.
 
 ## Credits
 
