@@ -1,6 +1,6 @@
 # SmartTravel
 
-**One key. Everywhere.** A lightweight, class-aware travel macro for **World of Warcraft: Wrath of the Lich King 3.3.5a**.
+**One button. Everywhere.** A lightweight, class-aware travel macro for **World of Warcraft: Wrath of the Lich King 3.3.5a**.
 
 ![SmartTravel cover](SmartTravel-Cover.jpg)
 
